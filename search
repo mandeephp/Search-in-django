@@ -1,0 +1,27 @@
+views
+
+
+
+def search(request):
+	if 'q' in request.GET and request.GET['q']:
+		q = request.GET['q']
+		movies = Movie.objects.filter(movie_name__icontains=q)
+		#movies1 = Movie.objects.filter(description__icontains=q)
+		return render(request, 'app/search_results.html', {'movies':movies,'query': q})
+	else:
+		return HttpResponse('Please submit a search term.')
+
+
+
+
+
+index page
+
+
+<form type="GET" action={% url 'your_url_name' %}>
+<input style="border-radius:7px;float:right;right:0px;position:absolute;top:0px;height:38px;width:245px;" id="q" name="q" style="border-radius:10px;height:37px;" type='text' placeholder=' Search Here...'  />
+<img style="float:right;right:0px;position:absolute;top:2px;height:42px;width:32px;" src={% static 'images/2.gif'%}/>
+</form>
+
+
+
