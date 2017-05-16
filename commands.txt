@@ -1,0 +1,18 @@
+1.	create folder in which you want to do your all stuff
+2.	git init 						--	to initilize the repository
+3.	git remote add origin "link of you project"		--- copy it from github
+4.	git pull origin master					--- To pull the repository
+5.	git status 				--- To check the status that you added a file or not
+6.	git add	filename		    --- To add the newly created file (only add a single file)
+7.	git add -A					---To add the all newly created files
+8. 	git commit -m "Message you want to show"	---To commit a single file
+9.	git commit -a -m "Message you want to show"	---To commit all the created files
+10.	git log 			--- To check how git commit all the changes with date and time
+11.	git branch name_of_branch		--To create branch
+12. 	git checkout name_of_branch		--To go to the particular branch
+13.	git merge branch_name		--To merge changes into the master branch but for this you always be in the branch in which you wan to merge  the changes
+14. 	cat file_name			--To view the content of file
+15. 	git rebase branchname		--To merge all the data of one branch to another branch	
+16.	ssh-keygen		--To genreate key for ssh service for push operation
+17.	ssh -T git@github.com	---To activate the entered ssh key
+18.	git push origin branch_name	--This will push the content of particular branch
